@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <button id="alert">Alert</button>
+        <button id="confirm">Confirm</button>
+        <button id="prompt">Prompt</button>
+        <output></output>
+        <dialog id="promptDialog">
+            <p>Enter your name:</p>
+            <form method="dialog">
+                <label for="name">Name</label>
+                <input type="text" id="name" />
+                <button value="cancel">Cancel</button>
+                <button id="confirmBtn" value="default">Confirm</button>
+            </form>
+        </dialog>
+        <dialog id="alertDialog">
+            This is an alert
+            <form method="dialog">
+                <button value="cancel">Cancel</button>
+                <button id="confirmBtn" value="default">Confirm</button>
+            </form>
+        </dialog>
+        <dialog id="confirmDialog">
+            Do you confirm this?
+            <form method="dialog">
+                <button value="cancel">Cancel</button>
+                <button id="confirmBtn" value="default">Confirm</button>
+            </form>
+        </dialog>
+        <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.js"
+        ></script>
+        <script src="scripts/customdialog.js" type="module"></script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+body {
+    color: white;
+    background-color: rgb(125, 125, 255);
+}
+button {
+    border: none;
+    padding: 15px;
+    margin: 5px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+p {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.post {
+    border: 1px solid black;
+    text-align: center;
+    width: 50%;
+}

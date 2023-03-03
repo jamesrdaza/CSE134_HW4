@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+        <title>James Daza</title>
+        <link rel="stylesheet" href="styles/style.css" />
+    </head>
+    <body>
+        <div class="box" tabindex="1">
+            <input type="checkbox" id="hamburger" />
+            <label for="hamburger" class="hamburgerLabel">
+                <span class="line-1"></span>
+                <span class="line-2"></span>
+                <span class="line-3"></span>
+            </label>
+        </div>
+        <header>
+            <h1><i>James Daza</i></h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experimental">Experimental</a></li>
+                </ul>
+            </nav>
+            <hr />
+        </header>
+        <main>
+            <div class="hero-bg">
+                <figure>
+                    <picture>
+                        <img src="/images/gilman.jpg" alt="Geisel Library" />
+                    </picture>
+                </figure>
+            </div>
+            <section class="content">
+                <h2 id="about">About</h2>
+                <p>
+                    <span>Hello! Welcome to my Portfolio!</span> <br />
+                    My name is <em>James Daza</em> and I'm an aspiring
+                    <strong>Web Developer </strong> <br />
+                    <svg></svg>
+                </p>
+                <aside>
+                    <img
+                        src="/images/svgs/welcome.svg"
+                        alt="Person waving hello as a greeting standing next to a tree"
+                        width="400"
+                    />
+                    <br />
+                    <code> printf("Hello World!"); </code>
+                    <br />
+                </aside>
+            </section>
+
+            <section class="content">
+                <h2 id="skills">Skills</h2>
+                <ol>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ol>
+                <pre>Choose a skill to learn about: <select name="skills" id="skillsOpt">
+                    <optgroup label="Web Dev">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="html">JavaScript</option>
+                    </optgroup>
+                </select>
+                </pre>
+            </section>
+            <section class="content">
+                <h2 id="projects">Projects</h2>
+                <details>
+                    <summary>More Details</summary>
+                    These are the projects I've completed
+                </details>
+                <div class="projectContainer">
+                    <div class="skill">
+                        <h3>Bullet Journal</h3>
+                    </div>
+                    <div class="skill">
+                        <h3>Blockchain DApp</h3>
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <h2 id="experimental">Experimental</h2>
+            </section>
+            <section class="content">
+                <h2 id="contact">Contact</h2>
+                <form action="/contact">
+                    <fieldset>
+                        <legend>Send Me A Message!</legend>
+                        <label for="email">E-mail: </label>
+                        <input type="text" id="email" /> <br />
+                        <br />
+                        <label for="reason">Reason: </label>
+                        <input list="reasons" id="reason" /> <br />
+                        <datalist id="reasons">
+                            <option value="Freelancing"></option>
+                            <option value="Recruiting"></option>
+                            <option value="Other"></option>
+                        </datalist>
+                        <label for="message">Message</label> <br />
+                        <textarea
+                            name="message"
+                            id="message"
+                            cols="30"
+                            rows="10"
+                        ></textarea>
+                        <br />
+                        <button>Submit</button>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+        <footer>&#169; James Daza</footer>
+        <template>
+            <h2>Project</h2>
+            <table>
+                <colgroup>
+                    <col span="1" class="languages" />
+                    <col span="1" class="technologies" />
+                </colgroup>
+                <caption>
+                    Project
+                </caption>
+                <tr>
+                    <th>Languages</th>
+                    <th>Technologies</th>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td></td>
+                </tr>
+            </table>
+        </template>
+        <script>
+            const canvas = document.querySelector("canvas");
+            console.log(canvas);
+            const ctx = canvas.getContext("2d");
+            ctx.fillStyle = "red";
+            ctx.fillRect(10, 10, 100, 100);
+        </script>
+    </body>
+</html>

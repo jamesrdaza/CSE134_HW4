@@ -1,0 +1,242 @@
+:root {
+    --primary-color: #fdf8e9;
+}
+
+html body {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    font-family: "Verdana";
+    font-size: 12px;
+}
+
+hr {
+    height: 1px;
+    background-color: black;
+    border: none;
+}
+
+main {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 0;
+}
+
+header {
+    height: 50px;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.24);
+    z-index: 1;
+}
+
+h1 {
+    overflow-x: hidden;
+    display: inline;
+    width: 15%;
+    margin-left: 10px;
+    color: lavender;
+    text-align: center;
+    margin-right: 0;
+}
+
+nav {
+    width: 85%;
+    position: relative;
+    grid-column: span 12;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px 0 10px;
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: rgb(62, 62, 231);
+}
+
+.content {
+    padding: 50px;
+    grid-column: span 12;
+    background-color: var(--primary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+}
+
+.hero-bg {
+    margin-top: 0;
+    grid-column: span 12;
+}
+.hero-bg figure {
+    display: flex;
+    justify-content: center;
+    overflow: clip;
+    width: 100%;
+    margin: 0;
+}
+picture {
+    height: 400px;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+.hero-bg img {
+    height: 400px;
+    width: 100vw;
+    object-fit: cover;
+}
+picture {
+    margin: 0;
+}
+
+.box {
+    float: right;
+    position: fixed;
+    margin: 0;
+    height: 20px;
+    width: 20px;
+    z-index: 2;
+    top: 0;
+    right: 25px;
+    display: none;
+}
+
+/* Hamburger CSS */
+
+.box #hamburger {
+    display: none;
+}
+
+.hamburgerLabel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 20px;
+    width: 20px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.hamburgerLabel:focus {
+    outline: none;
+}
+
+.line-1,
+.line-2,
+.line-3 {
+    position: relative;
+    height: 1px;
+    width: 20px;
+    margin: auto;
+    padding: 0;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.box input[type="checkbox"]:checked + .hamburgerLabel .line-1 {
+    animation: rotateTop 0.2s ease-in;
+}
+
+.box input[type="checkbox"]:checked + .hamburgerLabel .line-2 {
+    animation: removeMiddle 0.2s ease-in;
+}
+
+.box input[type="checkbox"]:checked + .hamburgerLabel .line-3 {
+    animation: rotateBottom 0.2s ease-in;
+}
+
+.box input[type="checkbox"]:checked + .hamburgerLabel .line-1,
+.box input[type="checkbox"]:checked + .hamburgerLabel .line-2,
+.box input[type="checkbox"]:checked + .hamburgerLabel .line-3 {
+    position: absolute;
+    animation-fill-mode: both;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@keyframes rotateTop {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes removeMiddle {
+    from {
+        transform: scaleX(1);
+    }
+
+    to {
+        transform: scaleX(0);
+        height: 0px;
+        width: 0px;
+    }
+}
+
+@keyframes rotateBottom {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-45deg);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .box {
+        display: block;
+    }
+    .box input[type="input"]:checked + header {
+        animation: mobileNavSlideForward;
+    }
+}
+
+@keyframes mobileNavSlideForward {
+    from {
+        opacity: 0;
+        transform: translateY(-100vh);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-70vh);
+    }
+}
+
+@keyframes mobileNavSlideBack {
+    from {
+        opacity: 1;
+        transform: translateY(-70vh);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-100vh);
+    }
+}
